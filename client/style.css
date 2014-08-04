@@ -46,7 +46,7 @@ button {
   color: #fff;
 }
 
-header, main { padding: 1em; }
+header, main { padding: 0.5em; }
 
 .state { display: none; }
 
@@ -90,10 +90,8 @@ nav li {
 }
 
 @media screen and (min-width: 48em) {
-  /*html {
-    padding: 0.5em;
-  }
-*/
+  header, main { padding: 1em; }
+
   nav ul {
     text-align: right;
   }
