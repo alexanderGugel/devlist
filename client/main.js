@@ -55,27 +55,15 @@ var displayList = function () {
   });
 };
 
-var displayAbout = function () {
-  $('.state.about').show();
-
-};
-
 var displaySubmit = function () {
   $('.state.submit').show();
   setTitle('Submit an awesome coupon for developers - 256list');
 
 };
 
-var displayContact = function () {
-  $('.state.contact').show();
-
-};
-
 var routes = {
   '/': displayList,
-  '/about': displayAbout,
-  '/submit': displaySubmit,
-  '/contact': displayContact
+  '/about': displayAbout
 };
 
 var router = Router(routes);
