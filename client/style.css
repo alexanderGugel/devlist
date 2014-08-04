@@ -10,7 +10,7 @@ specific font stacks to ensure the greatest OS/browser compatibility.
 */
 html, button, input, select, textarea, .pure-g [class *= "pure-u"] {
   -webkit-font-smoothing: antialiased;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.75;
 }
 
@@ -46,18 +46,9 @@ button {
   color: #fff;
 }
 
-header, main { padding: 0.5em; }
-
-main {
-  margin-top: 1em;
-}
+header, main { padding: 1em; }
 
 .state { display: none; }
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 300;
-  color: #222;
-}
 
 header a {
   color: #aaa;
@@ -83,11 +74,26 @@ nav li {
   display: inline-block;
 }
 
+.jumbo {
+  background: #0066cc;
+  color: #fff;
+  text-align: center;
+}
+
+.jumbo h2 {
+  display: inline-block;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.jumbo h2 span {
+  color: rgba(255, 255, 255, 0.2);
+}
+
 @media screen and (min-width: 48em) {
-  html {
+  /*html {
     padding: 0.5em;
   }
-
+*/
   nav ul {
     text-align: right;
   }
