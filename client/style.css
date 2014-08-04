@@ -118,9 +118,6 @@ footer .ion-heart {
 .list li .company {
   font-weight: 900;
   border-bottom: 1px solid #eee;
-}
-
-.list a {
   color: #444;
   text-decoration: none;
 }
@@ -129,7 +126,7 @@ footer .ion-heart {
   padding: 0.5em;
 }
 
-.list li span {
+.list li span, .list li a {
   display: inline-block;
   padding: 0 0.5em;
   border: 3px solid transparent;
