@@ -14,8 +14,6 @@ html, button, input, select, textarea, .pure-g [class *= "pure-u"] {
   line-height: 1.75;
 }
 
-html { background: #fdfdfd; }
-
 .right {
   text-align: right;
 }
@@ -51,7 +49,7 @@ button {
   color: #fff;
 }
 
-header, main { padding: 0.5em; }
+header, main, footer { padding: 0.5em; }
 
 .state { display: none; }
 
@@ -94,8 +92,18 @@ nav li {
   color: rgba(255, 255, 255, 0.2);
 }
 
+footer {
+  margin-top: 5em;
+  border-top: 1px solid #eee;
+  background: #f9f9f9;
+}
+
+footer .ion-heart {
+  color: #cc0000;
+}
+
 @media screen and (min-width: 48em) {
-  header, main { padding: 1em; }
+  header, main, footer { padding: 1em; }
 
   nav ul {
     text-align: right;
