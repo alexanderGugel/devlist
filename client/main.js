@@ -44,18 +44,24 @@ $('a[data-internal]').click(function (event) {
 });
 
 var displayList = function () {
-
+  $('.state.list').show();
+  $.getJSON('/api/coupons', function (coupons) {
+    console.log(coupons);
+  });
 };
 
 var displayAbout = function () {
+  $('.state.about').show();
 
 };
 
 var displaySubmit = function () {
+  $('.state.submit').show();
 
 };
 
 var displayContact = function () {
+  $('.state.contact').show();
 
 };
 
