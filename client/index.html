@@ -91,9 +91,19 @@
       {{#coupons}}
         <li>
           <a class="pure-g" href="{{url}}">
-            <div class="pure-u-1 pure-u-md-1-2">{{title}}</div>
-            <div class="pure-u-1 pure-u-md-1-4">{{category}}</div>
-            <div class="pure-u-1 pure-u-md-1-4">{{createdAt}} ago</div>
+            <div class="pure-u-1 pure-u-md-1-5">
+              <img src="{{favicon}}">
+              <span class="company">{{company}}</span>
+            </div>
+            <div class="pure-u-1 pure-u-md-2-5">
+              <span class="description">{{description}}</span>
+            </div>
+            <div class="pure-u-1 pure-u-md-1-5">
+              <span class="code">{{code}}</span>
+            </div>
+            <div class="pure-u-1 pure-u-md-1-5">
+              <span class="category">{{category}}</span>
+            </div>
           </a>
         </li>
       {{/coupons}}

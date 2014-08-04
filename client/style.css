@@ -109,8 +109,52 @@ footer .ion-heart {
   color: rgba(204, 0, 0, 0.2);
 }
 
+.list ul, .list li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.list li .company {
+  font-weight: 900;
+  border-bottom: 1px solid #eee;
+}
+
+.list a {
+  color: #444;
+  text-decoration: none;
+}
+
+.list li [class *= "pure-u"] {
+  padding: 0.5em;
+}
+
+.list li span {
+  display: inline-block;
+  padding: 0 0.5em;
+  border: 3px solid transparent;
+}
+
+.list li .category {
+  text-transform: uppercase;
+  color: #ccc;
+  border: 3px solid #eee;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  font-weight: 900;
+}
+
+.list li:hover {
+  background: #f9f9f9;
+}
+
 @media screen and (min-width: 48em) {
   header, main, footer { padding: 1em; }
+
+  .list ul {
+    margin-right: 1em;
+  }
 
   nav ul {
     text-align: right;

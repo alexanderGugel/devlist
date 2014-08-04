@@ -45,8 +45,13 @@ $('a[data-internal]').click(function (event) {
 
 var displayList = function () {
   $('.state.list').show();
+  setTitle('List of awesome coupons for developers - 256list');
   $.getJSON('/api/coupons', function (coupons) {
     console.log(coupons);
+    var html = templates.coupons.render({
+      coupons: coupons
+    });
+    $('.list ul').html(html);
   });
 };
 
@@ -57,6 +62,7 @@ var displayAbout = function () {
 
 var displaySubmit = function () {
   $('.state.submit').show();
+  setTitle('Submit an awesome coupon for developers - 256list');
 
 };
 

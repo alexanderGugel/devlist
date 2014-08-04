@@ -5,7 +5,8 @@ var coupons = [{
   url: 'http://newrelic.com/',
   createdAt: new Date(),
   extras: 'T-Shirt, curated',
-  code: 'biuref'
+  code: 'biuref',
+  category: 'analytics'
 }, {
   company: 'New Relic',
   description: '25% Off Your Entire Order Of Regular-Priced Items',
