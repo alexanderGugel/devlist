@@ -88,6 +88,7 @@ router.init();
 
 var fake = function () {
   for (var i = 0; i < 100; i++) {
+
   }
 };
 fake();
