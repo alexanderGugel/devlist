@@ -16,12 +16,17 @@ html, button, input, select, textarea, .pure-g [class *= "pure-u"] {
 
 html { background: #fdfdfd; }
 
+.right {
+  text-align: right;
+}
+
 body {
   color: #444;
   font-size: 13px;
 }
 
-input[type=text], textarea {
+input, textarea {
+  margin-bottom: 1em;
   width: 100%;
   padding: 1em 0.75em;
   border-radius: 2px;
@@ -39,9 +44,9 @@ button {
   border-radius: 2px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
-  background: #4e6cef;
+  background: #0066cc;
   border: 0;
-  font-weight: 600;
+  font-weight: bold;
   text-transform: uppercase;
   color: #fff;
 }
