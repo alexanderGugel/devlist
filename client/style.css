@@ -149,6 +149,10 @@ footer .ion-heart {
 @media screen and (min-width: 48em) {
   header, main, footer { padding: 1em; }
 
+  .list input {
+    margin-top: 1.5em;
+  }
+
   .list .pure-u-md-3-4 {
     padding-right: 1em;
   }
