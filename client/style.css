@@ -94,12 +94,19 @@ nav li {
 
 footer {
   margin-top: 5em;
-  border-top: 1px solid #eee;
-  background: #f9f9f9;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.2);
+}
+
+footer a {
+  color: rgba(0, 0, 0, 0.2);
+  font-weight: 900;
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
 }
 
 footer .ion-heart {
-  color: #cc0000;
+  color: rgba(204, 0, 0, 0.2);
 }
 
 @media screen and (min-width: 48em) {
