@@ -1,0 +1,102 @@
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+/*
+When setting the primary font stack, apply it to the Pure grid units along
+with `html`, `button`, `input`, `select`, and `textarea`. Pure Grids use
+specific font stacks to ensure the greatest OS/browser compatibility.
+*/
+html, button, input, select, textarea, .pure-g [class *= "pure-u"] {
+  -webkit-font-smoothing: antialiased;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.75;
+}
+
+html { background: #fdfdfd; }
+
+body {
+  color: #444;
+  font-size: 13px;
+}
+
+input[type=text], textarea {
+  width: 100%;
+  padding: 1em 0.75em;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  background: #F7F7F7;
+  border-top: 1px solid #C4C4C4;
+  border-bottom: 1px solid #E2E2E2;
+  border-left: 1px solid #DADADA;
+  border-right: 1px solid #DADADA;
+}
+
+button {
+  padding: 0.75em 1em;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  background: #4e6cef;
+  border: 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+header, main { padding: 0.5em; }
+
+main {
+  margin-top: 1em;
+}
+
+.state { display: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  color: #222;
+}
+
+header a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+nav strong {
+  font-weight: 600;
+}
+
+.logo {
+  font-weight: 700;
+  color: #222;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline-block;
+}
+
+@media screen and (min-width: 48em) {
+  html {
+    padding: 0.5em;
+  }
+
+  nav ul {
+    text-align: right;
+  }
+
+  nav li {
+    margin-left: 5px;
+  }
+
+  nav li:first-child {
+    margin-left: inherit;
+  }
+}
