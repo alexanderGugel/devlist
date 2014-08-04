@@ -152,8 +152,8 @@ footer .ion-heart {
 @media screen and (min-width: 48em) {
   header, main, footer { padding: 1em; }
 
-  .list ul {
-    margin-right: 1em;
+  .list .pure-u-md-3-4 {
+    padding-right: 1em;
   }
 
   nav ul {
