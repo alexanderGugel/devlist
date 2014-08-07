@@ -63,7 +63,7 @@ var displaySubmit = function () {
 
 var routes = {
   '/': displayList,
-  '/about': displayAbout
+  '/submit': displaySubmit
 };
 
 var router = Router(routes);
