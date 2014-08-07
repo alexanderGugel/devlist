@@ -10,8 +10,9 @@ specific font stacks to ensure the greatest OS/browser compatibility.
 */
 html, button, input, select, textarea, .pure-g [class *= "pure-u"] {
   -webkit-font-smoothing: antialiased;
-  font-family: "Inconsolata", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Inconsolata", "Lucida Console", Monaco, monospace;
   line-height: 1.75;
+  font-weight: 400;
 }
 
 .right {
@@ -19,7 +20,7 @@ html, button, input, select, textarea, .pure-g [class *= "pure-u"] {
 }
 
 body {
-  color: #444;
+  color: #222;
   font-size: 13px;
 }
 
@@ -44,7 +45,6 @@ button {
   -webkit-border-radius: 2px;
   background: #0066cc;
   border: 0;
-  font-weight: bold;
   text-transform: uppercase;
   color: #fff;
 }
@@ -56,15 +56,6 @@ header, main, footer { padding: 0.5em; }
 header a {
   color: #aaa;
   text-decoration: none;
-}
-
-nav strong {
-  font-weight: 600;
-}
-
-.logo {
-  font-weight: 700;
-  color: #222;
 }
 
 nav ul {
@@ -100,7 +91,6 @@ footer {
 
 footer a {
   color: rgba(0, 0, 0, 0.2);
-  font-weight: 900;
   text-decoration: none;
   border-bottom: 1px solid #eee;
 }
@@ -116,7 +106,6 @@ footer .ion-heart {
 }
 
 .list li .company {
-  font-weight: 900;
   border-bottom: 1px solid #eee;
   color: #444;
   text-decoration: none;
@@ -139,7 +128,6 @@ footer .ion-heart {
   border-radius: 2px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
-  font-weight: 900;
 }
 
 .list li:hover {
