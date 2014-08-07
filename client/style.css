@@ -10,7 +10,7 @@ specific font stacks to ensure the greatest OS/browser compatibility.
 */
 html, button, input, select, textarea, .pure-g [class *= "pure-u"] {
   -webkit-font-smoothing: antialiased;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Inconsolata", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.75;
 }
 
