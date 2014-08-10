@@ -3,17 +3,10 @@ var coupons = [{
   company: 'New Relic',
   description: '25% Off Your Entire Order Of Regular-Priced Items',
   url: 'http://newrelic.com/',
+  favicon: 'http://newrelic.com/favicon.ico',
   createdAt: new Date(),
-  extras: 'T-Shirt, curated',
   code: 'biuref',
   category: 'analytics'
-}, {
-  company: 'New Relic',
-  description: '25% Off Your Entire Order Of Regular-Priced Items',
-  url: 'http://newrelic.com/',
-  createdAt: new Date(),
-  extras: 'exculsive',
-  code: 'fehirfoeri'
 }];
 
 var insertCoupon = function (coupon) {
@@ -23,6 +16,8 @@ var insertCoupon = function (coupon) {
   });
 };
 
-for (var i = 0; i < coupons.length; i++) {
-  insertCoupon(coupons[i]);
+for (var j = 0; j < 100; j++) {
+  for (var i = 0; i < coupons.length; i++) {
+    insertCoupon(coupons[i]);
+  }
 }

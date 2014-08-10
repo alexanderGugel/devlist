@@ -43,15 +43,31 @@ $('a[data-internal]').click(function (event) {
   return false;
 });
 
+$('input[type=search]').keyup(function(event) {
+  var query = $(this).val();
+  $('.list ul li').each(function(i, li) {
+    var $li = $(li);
+
+    console.log(query);
+    console.log($coupons);
+
+  });
+  // console.log(query);
+});
+
+var searchIndex = {};
+
 var displayList = function () {
   $('.state.list').show();
   setTitle('List of awesome coupons for developers - devlist');
   $.getJSON('/api/coupons', function (coupons) {
-    console.log(coupons);
-    var html = templates.coupons.render({
-      coupons: coupons
-    });
-    $('.list ul').html(html);
+    // console.log(coupons);
+    for (var i = 0; i < coupons.length; i++) {
+      var coupon = coupons[i];
+      var $coupon = $(templates.coupon.render(coupon));
+
+      $('.list ul').append($coupon);
+    }
   });
 };
 
