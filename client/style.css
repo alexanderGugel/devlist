@@ -95,7 +95,6 @@ nav li {
 }
 
 footer {
-  margin-top: 5em;
   color: rgba(0, 0, 0, 0.2);
   border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
@@ -145,6 +144,18 @@ footer .ion-heart {
 
 .list li:hover {
   background: #f9f9f9;
+}
+
+.subscribe {
+  text-align: center;
+  margin: 2em 0;
+}
+
+.subscribe .pure-g {
+  text-align: left;
+  width: 500px;
+  max-width: 100%;
+  margin: auto;
 }
 
 @media screen and (min-width: 48em) {

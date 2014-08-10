@@ -5,4 +5,8 @@ angular.module('app', [])
     console.log(data);
     $scope.coupons = data;
   });
+
+  $scope.filterByCategory = function(category) {
+    $scope.query = category;
+  };
 }]);
