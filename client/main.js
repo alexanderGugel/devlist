@@ -58,7 +58,6 @@ var displayList = function () {
 var displaySubmit = function () {
   $('.state.submit').show();
   setTitle('Submit an awesome coupon for developers - devlist');
-
 };
 
 var routes = {

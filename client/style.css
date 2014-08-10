@@ -1,6 +1,11 @@
 /* apply a natural box layout model to all elements */
-*, *:before, *:after {
-  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /*
@@ -8,50 +13,59 @@ When setting the primary font stack, apply it to the Pure grid units along
 with `html`, `button`, `input`, `select`, and `textarea`. Pure Grids use
 specific font stacks to ensure the greatest OS/browser compatibility.
 */
-html, button, input, select, textarea, .pure-g [class *= "pure-u"] {
-  -webkit-font-smoothing: antialiased;
-  font-family: "Inconsolata", "Lucida Console", Monaco, monospace;
-  line-height: 1.75;
-  font-weight: 400;
-}
 
-.right {
-  text-align: right;
+html,
+button,
+input,
+select,
+textarea,
+.pure-g [class*="pure-u"] {
+  font-family: "Inconsolata", "Lucida Console", Monaco, monospace;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  line-height: 1.75;
 }
 
 body {
-  color: #222;
   font-size: 13px;
+  color: #222;
 }
 
-input, textarea {
-  margin-bottom: 1em;
+input,
+textarea {
   width: 100%;
   padding: 1em 0.75em;
-  border-radius: 2px;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
+  margin-bottom: 1em;
   background: #F7F7F7;
   border-top: 1px solid #C4C4C4;
+  border-right: 1px solid #DADADA;
   border-bottom: 1px solid #E2E2E2;
   border-left: 1px solid #DADADA;
-  border-right: 1px solid #DADADA;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
 }
 
 button {
   padding: 1em 0.75em;
-  border-radius: 2px;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
+  color: #fff;
+  text-transform: uppercase;
   background: #0066cc;
   border: 0;
-  text-transform: uppercase;
-  color: #fff;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
 }
 
-header, main, footer { padding: 0.5em; }
+header,
+main,
+footer {
+  padding: 0.5em;
+}
 
-.state { display: none; }
+.state {
+  display: none;
+}
 
 header a {
   color: #aaa;
@@ -59,9 +73,9 @@ header a {
 }
 
 nav ul {
-  list-style: none;
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 
 nav li {
@@ -69,9 +83,9 @@ nav li {
 }
 
 .jumbo {
-  background: #0066cc;
   color: #fff;
   text-align: center;
+  background: #0066cc;
 }
 
 .jumbo h2 {
@@ -85,8 +99,8 @@ nav li {
 
 footer {
   margin-top: 5em;
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 footer a {
@@ -99,35 +113,37 @@ footer .ion-heart {
   color: rgba(204, 0, 0, 0.2);
 }
 
-.list ul, .list li {
+.list ul,
+.list li {
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
 .list li .company {
-  border-bottom: 1px solid #eee;
   color: #444;
   text-decoration: none;
+  border-bottom: 1px solid #eee;
 }
 
-.list li [class *= "pure-u"] {
+.list li [class*="pure-u"] {
   padding: 0.5em;
 }
 
-.list li span, .list li a {
+.list li span,
+.list li a {
   display: inline-block;
   padding: 0 0.5em;
   border: 3px solid transparent;
 }
 
 .list li .category {
-  text-transform: uppercase;
   color: #ccc;
+  text-transform: uppercase;
   border: 3px solid #eee;
-  border-radius: 2px;
-  -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
 }
 
 .list li:hover {
@@ -135,30 +151,26 @@ footer .ion-heart {
 }
 
 .list .pure-u-md-1-4 button {
-  margin-left: 0.5em;
-  width: 100%;
   display: block;
+  width: 100%;
+  margin-left: 0.5em;
 }
 
 @media screen and (min-width: 48em) {
-  header, main, footer { padding: 1em; }
-
+  header,
+  main,
+  footer {
+    padding: 1em;
+  }
   .list .pure-u-md-3-4 input {
     margin-top: 1.5em;
   }
-
   .list .pure-u-md-3-4 {
     padding-right: 1em;
   }
-
-  nav ul {
-    text-align: right;
-  }
-
   nav li {
     margin-left: 5px;
   }
-
   nav li:first-child {
     margin-left: inherit;
   }
