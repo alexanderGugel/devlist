@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="app">
   <head>
     <meta charset="utf-8">
     <title></title>
@@ -20,10 +20,34 @@
       <h2><span>var</span> <span>'</span>devlist<span>'</span> <span>=</span> <span>'</span>The best coupons for developers.<span>';</span></h2>
     </header>
 
-    <main class="state list pure-g">
+    <main class="list pure-g" ng-controller="CouponsController">
       <section class="pure-u-1">
-        <input type="search" placeholder="Search">
-        <ul></ul>
+        <input type="search" placeholder="Search" ng-model="query">
+        <ul>
+          <li ng-repeat="coupon in coupons | filter:query" class="pure-g">
+            <div class="pure-u-1 pure-u-md-1-5">
+              <a href="{{coupon.url}}" class="company">
+                <img ng-src="{{coupon.favicon}}">
+                {{coupon.company}}
+              </a>
+            </div>
+            <div class="pure-u-1 pure-u-md-2-5">
+              <a href="{{coupon.url}}" class="description">
+                {{coupon.description}}
+              </a>
+            </div>
+            <div class="pure-u-1-2 pure-u-md-1-5">
+              <a href="{{coupon.url}}" class="code">
+                {{coupon.code}}
+              </a>
+            </div>
+            <div class="pure-u-1-2 pure-u-md-1-5">
+              <span class="category">
+                {{coupon.category}}
+              </span>
+            </div>
+          </li>
+        </ul>
       </section>
       <!--section class="pure-u-1 pure-u-md-1-4">
         <p>
@@ -54,36 +78,6 @@
       </section-->
     </main>
 
-    <main class="state submit">
-      <h3>Submit a coupon</h3>
-      <p>Have a cool product &amp; coupon to share? Awesome!</p>
-      <form class="pure-g">
-        <input class="pure-u-1" type="text" placeholder="Company (e.g. New Relic)" name="company" required>
-        <input class="pure-u-1" type="text" placeholder="Description (e.g. 20% off awesome JavaScript book)" name="description" required>
-        <input class="pure-u-1" type="url" placeholder="Website/ Offer link (e.g. http://example.com/login?coupon=123)" name="website" required>
-        <input class="pure-u-1" type="text" placeholder="Coupon code (e.g. 123456)" name="code" required>
-        <div class="pure-u-1 pure-u-md-2-3">
-          Select a category for easy search:
-
-          <select name="category">
-            <option value="Analytics and Monitoring">Analytics and Monitoring</option>
-            <option value="Build, test and deploy">Build, test and deploy</option>
-            <option value="Hosting">Hosting</option>
-            <option value="Legal software">Legal software</option>
-            <option value="Collaboration">Collaboration</option>
-            <option value="Data Stores">Data Stores</option>
-            <option value="Mobile">Mobile</option>
-            <option value="Support and Sales">Support and Sales</option>
-            <option value="Platform tools">Platform tools</option>
-            <option value="Mobile">Mobile</option>
-          </select>
-        </div>
-        <div class="right pure-u-1 pure-u-md-1-3">
-          <button>Submit!</button>
-        </div>
-      </form>
-    </main>
-
     <footer>
       <p>
         Thanks for using <strong>devlist</strong>. We <i class="ion-heart icon"></i> you.
@@ -93,32 +87,7 @@
       </p>
     </footer>
 
-    <script type="text/template" class="coupon">
-        <li class="pure-g">
-          <div class="pure-u-1 pure-u-md-1-5">
-            <a href="{{url}}" class="company">
-              <img src="{{favicon}}">
-              {{company}}
-            </a>
-          </div>
-          <div class="pure-u-1 pure-u-md-2-5">
-            <a href="{{url}}" class="description">
-              {{description}}
-            </a>
-          </div>
-          <div class="pure-u-1-2 pure-u-md-1-5">
-            <a href="{{url}}" class="code">
-              {{code}}
-            </a>
-          </div>
-          <div class="pure-u-1-2 pure-u-md-1-5">
-            <span class="category">
-              {{category}}
-            </span>
-          </div>
-        </li>
-    </script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="bundle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.17/angular.min.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
