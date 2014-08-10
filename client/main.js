@@ -45,7 +45,7 @@ $('a[data-internal]').click(function (event) {
 
 var displayList = function () {
   $('.state.list').show();
-  setTitle('List of awesome coupons for developers - 256list');
+  setTitle('List of awesome coupons for developers - devlist');
   $.getJSON('/api/coupons', function (coupons) {
     console.log(coupons);
     var html = templates.coupons.render({
@@ -57,7 +57,7 @@ var displayList = function () {
 
 var displaySubmit = function () {
   $('.state.submit').show();
-  setTitle('Submit an awesome coupon for developers - 256list');
+  setTitle('Submit an awesome coupon for developers - devlist');
 
 };
 
