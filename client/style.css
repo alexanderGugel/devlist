@@ -36,7 +36,7 @@ body {
   color: #222;
 }
 
-input[type=search]:focus {
+input:focus {
   outline: 0;
   background: #fff;
 }
@@ -88,7 +88,7 @@ header a {
 .jumbo h2 {
   margin: 0;
   display: inline-block;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  /*border-bottom: 2px solid rgba(255, 255, 255, 0.5);*/
 }
 
 .jumbo h2 span {
@@ -156,14 +156,9 @@ footer .ion-heart {
 
 .subscribe {
   text-align: center;
-  margin: 2em 0;
-}
-
-.subscribe .pure-g {
-  text-align: left;
+  margin: 2em auto;
   width: 500px;
   max-width: 100%;
-  margin: auto;
 }
 
 @media screen and (min-width: 48em) {
