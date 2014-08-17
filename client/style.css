@@ -71,7 +71,7 @@ header a {
   text-decoration: none;
 }
 
-a.subscribe {
+button.subscribe {
   border: 2px solid rgba(0, 0, 0, 0.8);
   background: none;
   color: #333;
@@ -84,14 +84,6 @@ a.subscribe {
   -webkit-border-radius: 2px;
      -moz-border-radius: 2px;
           border-radius: 2px;
-}
-
-a.subscribe:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-a.subscribe:hover {
-  background: rgba(255, 255, 255, 0.1);
 }
 
 .jumbo {
@@ -110,18 +102,18 @@ a.subscribe:hover {
 }
 
 footer {
-  color: rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.35);
   border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 footer a {
-  color: rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.35);
   text-decoration: none;
   border-bottom: 1px solid #eee;
 }
 
 footer .ion-heart {
-  color: rgba(204, 0, 0, 0.2);
+  color: rgba(204, 0, 0, 0.35);
 }
 
 .list ul,
