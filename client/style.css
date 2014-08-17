@@ -42,11 +42,18 @@ input:focus {
 }
 
 input[type=search] {
-  margin-bottom: 1em;
+  /*margin-bottom: 1em;*/
+  padding: 1em;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+  border: 0;
+  background: #fff;
 }
 
 input,
 textarea {
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
   width: 100%;
   padding: 1em 0.75em;
   background: #F7F7F7;
@@ -54,9 +61,6 @@ textarea {
   border-right: 1px solid #DADADA;
   border-bottom: 1px solid #E2E2E2;
   border-left: 1px solid #DADADA;
-  -webkit-border-radius: 2px;
-     -moz-border-radius: 2px;
-          border-radius: 2px;
 }
 
 header,
