@@ -69,6 +69,7 @@ button {
 
 header,
 main,
+aside,
 footer {
   padding: 0.5em;
 }
@@ -164,7 +165,16 @@ footer .ion-heart {
 @media screen and (min-width: 48em) {
   header,
   main,
-  footer {
+  footer,
+  aside {
     padding: 1em;
+  }
+
+  aside {
+    padding-top: 0;
+  }
+
+  aside p:first-child {
+    margin-top: 0;
   }
 }
