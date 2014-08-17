@@ -36,6 +36,11 @@ body {
   color: #222;
 }
 
+input[type=search]:focus {
+  outline: 0;
+  background: #fff;
+}
+
 input,
 textarea {
   width: 100%;
@@ -77,9 +82,11 @@ header a {
   color: #fff;
   text-align: center;
   background: #0066cc;
+  border-bottom: 7px solid rgba(255, 255, 255, 0.2);
 }
 
 .jumbo h2 {
+  margin: 0;
   display: inline-block;
   border-bottom: 2px solid rgba(255, 255, 255, 0.5);
 }
