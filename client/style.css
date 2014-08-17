@@ -41,11 +41,14 @@ input:focus {
   background: #fff;
 }
 
+input[type=search] {
+  margin-bottom: 1em;
+}
+
 input,
 textarea {
   width: 100%;
   padding: 1em 0.75em;
-  margin-bottom: 1em;
   background: #F7F7F7;
   border-top: 1px solid #C4C4C4;
   border-right: 1px solid #DADADA;

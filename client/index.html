@@ -82,10 +82,12 @@
       <h2>Subscribe to this list!</h2>
       <div class="pure-g">
         <div class="pure-u-1">
-          <input type="email" placeholder="Your e-mail address" ng-focus="subscribe=true" ng-blur="subscribe=false">
+          <input type="email" id="email" placeholder="Your e-mail address" ng-focus="subscribe=true" ng-blur="subscribe=false">
         </div>
-        <div class="pure-u-1-1" ng-show="subscribe">
-          Get weekly notifications about interesting deals. - No spam.
+        <div class="pure-u-1-1">
+          <p>
+            <label for="email">Get weekly notifications about interesting deals. - No spam.</label>
+          </p>
         </div>
       </div>
     </section>
