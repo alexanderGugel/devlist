@@ -187,6 +187,13 @@ section.subscribe {
     padding: 1em;
   }
 
+
+  .jumbo div:first-child {
+    text-align: left;
+    padding-top: 7px;
+  }
+
+
   aside {
     padding-top: 0;
   }
