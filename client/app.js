@@ -33,7 +33,9 @@ angular.module('app', [])
     var timer = null;
     return function () {
       var context = this, args = arguments;
-      if (timer) $timeout.cancel(timer);
+      if (timer) {
+        $timeout.cancel(timer);
+      }
       timer = $timeout(function () {
         fn.apply(context, args);
       }, delay);
