@@ -148,6 +148,17 @@ footer .ion-heart {
   color: #999;
 }
 
+.list .head .ordered a:first-child {
+  padding-right: 0;
+  border-right: 0;
+  margin-right: 0.5em;
+}
+
+.list .head .ordered a:last-child {
+  padding: 0;
+  border: 0;
+}
+
 .list li {
   background: #fff;
   padding: 0.5em;
