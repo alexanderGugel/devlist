@@ -1,6 +1,7 @@
 var express = require('express'),
-    server = express(),
     redis = require('./redis');
+
+var server = express();
 
 server.get('/', function(req, res) {
   res.redirect('/alpha');

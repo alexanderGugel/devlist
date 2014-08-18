@@ -6,13 +6,13 @@ var redisPort = process.env.REDIS_PORT || 6379,
 
 // Create a new client and establish a connection to DB.
 var redis = require('redis').createClient(redisPort, redisHost, {
-  auth_pass: redisAuth
+  'auth_pass': redisAuth
 });
 
 redis.on('error', function (error) {
   console.error('Error in Redis client: ' + error.message);
   console.log('Exiting now because of error in Redis client');
-  process.exit(1);
+  throw new Error('Redis Error');
 });
 
 redis.on('connect', function () {

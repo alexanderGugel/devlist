@@ -7,13 +7,13 @@ var words = fs.readFileSync('/usr/share/dict/words', {
 }).split('\n');
 
 var randomWord = function() {
-  return words[Math.floor(Math.random()*words.length)];
+  return words[Math.floor(Math.random() * words.length)];
 };
 
 var genFakeCoupon = function() {
   return {
     company: randomWord() + ' ltd.',
-    description: Math.floor(Math.random()*100) + '% Off ' + randomWord(),
+    description: Math.floor(Math.random() * 100) + '% Off ' + randomWord(),
     url: 'http://' + randomWord() + '.com/login',
     favicon: 'http://newrelic.com/favicon.ico',
     createdAt: new Date(),
