@@ -39,7 +39,7 @@ body {
 
 input:focus {
   outline: 0;
-  background: #fff;
+  border: 1px solid #0066cc;
 }
 
 input[type=search] {
@@ -65,7 +65,7 @@ textarea {
           border-radius: 2px;
   width: 100%;
   padding: 1em 0.75em;
-  background: #F7F7F7;
+  background: #fff;
   border-top: 1px solid #C4C4C4;
   border-right: 1px solid #DADADA;
   border-bottom: 1px solid #E2E2E2;
