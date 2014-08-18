@@ -33,3 +33,5 @@ var insertCoupon = function (coupon) {
 for (var j = 0; j < 100; j++) {
   insertCoupon(genFakeCoupon());
 }
+
+redis.quit();
