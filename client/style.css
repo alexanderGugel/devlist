@@ -141,7 +141,6 @@ footer .ion-heart {
 }
 
 .list .head {
-  display: none;
   background: #fafafa;
 }
 
@@ -199,10 +198,6 @@ section.subscribe {
   footer,
   aside {
     padding: 1em;
-  }
-
-  .list .head {
-    display: block;
   }
 
   .jumbo div:first-child {
