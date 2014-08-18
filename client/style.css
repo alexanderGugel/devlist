@@ -30,6 +30,7 @@ textarea,
 
 html {
   background: rgba(240, 240, 240, 0.37);
+  word-break: break-all;
 }
 
 body {
