@@ -1,15 +1,23 @@
 angular.module('app', [])
 
-.run(['$rootScope', function($rootScope) {
-  $rootScope.jumpTo = function(id) {
-    analytics.track('Jumped to section', {
-      section: id
+.run(['$rootScope', 'jumpTo', 'track', function($rootScope, jumpTo, track) {
+  $rootScope.jumpTo = jumpTo;
+  $rootScope.track = track;
+}])
+
+.factory('jumpTo', ['track', function(track) {
+  return function(id) {
+    track('Jumped to section', {
+      id: id
     });
     $('html, body').animate({
       scrollTop: $('#' + id).offset().top
     }, 100);
   };
-  $rootScope.track = function() {
+}])
+
+.factory('track', [function() {
+  return function() {
     return analytics.track.apply(analytics.track, arguments);
   };
 }])
@@ -27,20 +35,20 @@ angular.module('app', [])
   };
 }])
 
-.controller('CouponsController', ['$scope', '$http', 'debounce', function($scope, $http, debounce) {
+.controller('CouponsController', ['$scope', '$http', 'debounce', 'track', function($scope, $http, debounce, track) {
   $http({method: 'GET', url: 'api/coupons'}).success(function(data) {
     $scope.coupons = data;
   });
 
   $scope.filterByCategory = function(category) {
-    analytics.track('Filtered by category', {
+    track('Filtered by category', {
       category: category
     });
     $scope.query = category;
   };
 
   $scope.trackFilterByQuery = debounce(function() {
-    analytics.track('Filtered by query', {
+    track('Filtered by query', {
       query: $scope.query
     });
   }, 500);
