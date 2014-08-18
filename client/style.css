@@ -145,6 +145,10 @@ footer .ion-heart {
   background: #fafafa;
 }
 
+.list .head .ordered a {
+  color: #999;
+}
+
 .list li {
   background: #fff;
   padding: 0.5em;
