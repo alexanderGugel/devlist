@@ -30,7 +30,6 @@ textarea,
 
 html {
   background: rgba(240, 240, 240, 0.37);
-  word-break: break-all;
 }
 
 body {
@@ -139,6 +138,7 @@ footer .ion-heart {
   padding: 0;
   margin: 0;
   list-style: none;
+  word-break: break-all;
 }
 
 .list .head {
