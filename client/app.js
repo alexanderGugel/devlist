@@ -14,7 +14,20 @@ angular.module('app', [])
   };
 }])
 
-.controller('CouponsController', ['$scope', '$http', '$timeout', function($scope, $http, $timeout) {
+.factory('debounce', ['$timeout', function($timeout) {
+  return function debounce(fn, delay) {
+    var timer = null;
+    return function () {
+      var context = this, args = arguments;
+      if (timer) $timeout.cancel(timer);
+      timer = $timeout(function () {
+        fn.apply(context, args);
+      }, delay);
+    };
+  };
+}])
+
+.controller('CouponsController', ['$scope', '$http', 'debounce', function($scope, $http, debounce) {
   $http({method: 'GET', url: 'api/coupons'}).success(function(data) {
     $scope.coupons = data;
   });
@@ -26,9 +39,9 @@ angular.module('app', [])
     $scope.query = category;
   };
 
-  $scope.trackFilterByQuery = function() {
+  $scope.trackFilterByQuery = debounce(function() {
     analytics.track('Filtered by query', {
       query: $scope.query
     });
-  };
+  }, 500);
 }]);
