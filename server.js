@@ -2,6 +2,10 @@ var express = require('express'),
     server = express(),
     redis = require('./redis');
 
+server.get('/', function(req, res) {
+  res.redirect('/alpha');
+});
+
 server.use(express.static(__dirname + '/client'));
 
 server.get('/api/coupons', function (req, res) {
@@ -16,8 +20,12 @@ server.get('/api/coupons', function (req, res) {
   });
 });
 
-server.get('*', function(req, res) {
+server.get('/alpha', function(req, res) {
   res.sendfile('client/index.html');
+});
+
+server.get('*', function(req, res) {
+  res.redirect('/');
 });
 
 var port = process.env.PORT || 3141;
