@@ -122,15 +122,21 @@
       </aside>
     </main>
 
-    <section class="subscribe" id="subscribe" name="subscribe">
+    <section class="subscribe" id="subscribe" name="subscribe" ng-controller="SubscribeController">
       <h2>Subscribe to this list!</h2>
       <div class="pure-g">
-        <div class="pure-u-1">
-          <input type="email" id="email" placeholder="Your e-mail address" ng-focus="subscribe=true" ng-blur="subscribe=false">
-        </div>
+        <form class="pure-u-1"ng-submit="subscribe()">
+          <input type="email" id="email" placeholder="Your e-mail address" ng-focus="subscribing=true" ng-blur="subscribing=false" ng-model="email">
+        </form>
         <div class="pure-u-1-1">
           <p>
             <label for="email">Get weekly notifications about interesting deals. - No spam.</label>
+            <br>
+            <span ng-show="success" class="success">
+              Awesome! You successfully signed up for our weekly newsletter.
+              <br>
+              We won't disappoint you.
+            </span>
           </p>
         </div>
       </div>

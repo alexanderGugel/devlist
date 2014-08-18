@@ -203,6 +203,10 @@ section.subscribe {
   max-width: 100%;
 }
 
+.success {
+  color: green;
+}
+
 @media screen and (min-width: 48em) {
   header,
   main,

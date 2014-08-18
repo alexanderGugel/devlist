@@ -22,6 +22,12 @@ angular.module('app', [])
   };
 }])
 
+.factory('identify', [function() {
+  return function() {
+    return analytics.identify.apply(analytics.identify, arguments);
+  };
+}])
+
 .factory('debounce', ['$timeout', function($timeout) {
   return function debounce(fn, delay) {
     var timer = null;
@@ -52,4 +58,16 @@ angular.module('app', [])
       query: $scope.query
     });
   }, 500);
+}])
+
+
+.controller('SubscribeController', ['$scope', '$http', 'identify', function($scope, $http, identify) {
+
+  $scope.subscribe = function() {
+    identify('Submitted e-mail address in subscribe form', {
+      email: $scope.email
+    });
+    $scope.email = '';
+    $scope.success = true;
+  };
 }]);
