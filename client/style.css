@@ -140,6 +140,11 @@ footer .ion-heart {
   list-style: none;
 }
 
+.list .head {
+  display: none;
+  background: #fafafa;
+}
+
 .list li {
   background: #fff;
   padding: 0.5em;
@@ -192,6 +197,9 @@ section.subscribe {
     padding: 1em;
   }
 
+  .list .head {
+    display: block;
+  }
 
   .jumbo div:first-child {
     text-align: left;
