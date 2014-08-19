@@ -1,0 +1,77 @@
+<!doctype html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title>devlist</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- TODO Twitter Cards, Open Graph -->
+    <link rel="icon" type="image/png" href="http://www.devlist.co/img/puking_rainbows.png" />
+    <!--[if lte IE 8]>
+      <link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.5.0/base-min.css&pure/0.5.0/grids-min.css&pure/0.5.0/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+      <link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.5.0/base-min.css&pure/0.5.0/grids-min.css&pure/0.5.0/grids-responsive-min.css">
+    <!--<![endif]-->
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+  window.analytics=window.analytics||[],window.analytics.methods=["identify","group","track","page","pageview","alias","ready","on","once","off","trackLink","trackForm","trackClick","trackSubmit"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var key=window.analytics.methods[i];window.analytics[key]=window.analytics.factory(key)}window.analytics.load=function(t){if(!document.getElementById("analytics-js")){var a=document.createElement("script");a.type="text/javascript",a.id="analytics-js",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.io/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)}},window.analytics.SNIPPET_VERSION="2.0.9",
+  window.analytics.load("ytbksmideg");
+  window.analytics.page();
+</script>
+
+  </head>
+  <body class="launch">
+    <div class="full-height">
+      <section class="subscribe" id="subscribe" name="subscribe" ng-controller="SubscribeController">
+        <h1>The best coupons for developers.</h1>
+        <div class="pure-g">
+          <form class="pure-u-1"ng-submit="subscribe()">
+            <input type="email" id="email" placeholder="Your e-mail address" ng-focus="subscribing=true" ng-blur="subscribing=false" ng-model="email">
+          </form>
+          <div class="pure-u-1-1">
+            <p>
+              <label for="email">Get notified as soon as we launch. - No spam.</label>
+              <br>
+              <span ng-show="success" class="success">
+                Awesome!
+                <br>
+                We won't disappoint you.
+              </span>
+            </p>
+          </div>
+        </div>
+        <img src="img/puking_rainbows.svg">
+      </section>
+    </div>
+
+    <footer>
+      <p>
+        Thanks for being excited about <strong>devlist</strong>. devlist <i class="ion-heart icon"></i> you.
+        <br>
+        If there is anything we can help with, please drop us a line:
+        <a href="mailto:alex@devlist.co">alex@devlist.co</a>
+        <br>
+        Puking Rainbows designed by <a href="http://www.thenounproject.com/Mattebrooks">Matt Brooks</a> from the <a href="http://www.thenounproject.com">Noun Project</a>
+      </p>
+      <p>
+        <a href="https://docs.google.com/forms/d/1-YAcQDZsoeTsyxaXYJcj5RkNx2RTbFjino59_JC1PEk/viewform"><button class="submit"><i class="icon ion-plus"></i> Submit a coupon!</button></a>
+      </p>
+    </footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.17/angular.min.js"></script>
+    <!--script src="//code.angularjs.org/1.2.22/angular-route.min.js"></script-->
+    <script src="app.js"></script>
+
+    <script>
+    (function(d, t) {
+        var g = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        g.src = '//hnbutton.appspot.com/static/hn.min.js';
+        s.parentNode.insertBefore(g, s);
+    }(document, 'script'));
+    </script>
+  </body>
+</html>

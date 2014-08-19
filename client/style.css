@@ -208,6 +208,23 @@ section.subscribe {
   color: green;
 }
 
+@media screen and (min-height: 300px) {
+  .launch .subscribe {
+    height: 300px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .launch .full-height {
+    height: 100vh;
+  }
+}
+
+
 @media screen and (min-width: 48em) {
   header,
   main,

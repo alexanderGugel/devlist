@@ -4,8 +4,11 @@ var express = require('express'),
 var server = express();
 
 server.get('/', function(req, res) {
-  res.send('Coming soon.');
-  // res.redirect('/alpha');
+  res.redirect('/launch');
+});
+
+server.get('/launch', function(req, res) {
+  res.sendfile('client/launch.html');
 });
 
 server.use(express.static(__dirname + '/client'));
