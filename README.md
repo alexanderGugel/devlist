@@ -1,3 +1,15 @@
 [![Build Status](https://travis-ci.org/alexanderGugel/devlist.svg?branch=master)](https://travis-ci.org/alexanderGugel/devlist)
 
-**WIP**
+# devlist.co
+
+A "Daily Deals" like website for software engineers.
+
+**devlist** is a **coupon website for developers**.
+Our goal is to create a list of products loved and curated by the best software
+engineers. It enables small startups, big corporations and individuals to promote
+their SaaS products, hosting solutions, educational materials or whatever
+software engineers might be interested in for free.
+
+*Launching soon.*
+
+Sign up and be among the first to use it: (devlist.co)[http://devlist.co]
