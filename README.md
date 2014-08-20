@@ -5,7 +5,7 @@
 A "Daily Deals" like website for software engineers.
 
 **devlist** is a **coupon website for developers**.
-Our goal is to create a list of products loved and curated by the best software
+The goal is to create a list of products loved and curated by the best software
 engineers. It enables small startups, big corporations and individuals to promote
 their SaaS products, hosting solutions, educational materials or whatever
 software engineers might be interested in for free.
